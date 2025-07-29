@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bidirectional Sinhala–English Translator</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f2f2f2; }
+        textarea { width: 100%; height: 100px; padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; }
+        .result { margin-top: 20px; padding: 15px; background: #e0ffe0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Bidirectional Sinhala–English Translator</h2>
+    <form method="POST">
+        <textarea name="text" placeholder="Enter Sinhala or English text..."></textarea><br><br>
+        <button type="submit">Translate</button>
+    </form>
+    {% if translation %}
+    <div class="result"><strong>Translation:</strong> {{ translation }}</div>
+    {% endif %}
+</body>
+</html>
